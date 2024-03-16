@@ -1,3 +1,6 @@
+
+//  obj2.greeting('pryvit')
+
 // let obj = {
 //     name:'greeting',
 //     greeting:function(msg){
@@ -12,14 +15,11 @@
 //     greeting:function(msg){
 //         console.log(msg +' hello okten ' + this.name)
 //     }
+//
+// asd()
+// function asd(){
+//
 // }
-//  obj2.greeting('pryvit')
-
-
-asd()
-function asd(){
-
-}
 
 
 // let foobar = function(){
@@ -46,8 +46,18 @@ function asd(){
 // }
 // obj3.sayHI()
 
-const foo=() => console.log('qvendqvendqvend')
-foo()
-const fooo=(a, b) => a+b
-console.log(fooo(10,15))
+// const foo=() => console.log('qvendqvendqvend')
+// foo()
+// const fooo=(a, b) => a+b
+// console.log(fooo(10,15))
 
+
+
+let str1='Okten hello'
+console.log(str1.toUpperCase())
+console.log(str1.toLowerCase())
+console.log(str1.startsWith('Ok'))
+console.log(str1.endsWith('lo'))
+console.log(str1.substring(1,str1.length -2))
+console.log(str1.indexOf('n'))    //lastindexOf
+console.log(str1.charAt(0))
