@@ -77,45 +77,73 @@ let users = [
     {name: 'max', age: 31, status: true}
 ];
 
-// users.forEach (item=>console.log(item));
+/*
+// users.forEach(item=>console.log(item))
 
-let filter=users.filter((user)=>user.age>30 && !user.status)
-console.log(filter)
-
+//
+//
+// function asd(item){
+//     console.log(item)
+// }
+// users.forEach(asd)
+//
+//
+// function filtering(item){
+//     if (item.age>30){
+//         console.log(item)
+//     }
+// }
+// users.filter(filtering)
+//
+//
+// let filter=users.filter((user)=>user.age>30)
+// console.log(filter)
+//
 //
 // let map=users.map((user)=>{
 //     let u={
-//         imya:user.name,
-//         vik:user.age
+//         name:user.name,
+//         age:users.age
 //     }
 //     return u
 // })
-
+// console.log(map)
+//
+// let map=users.map((user,index)=>({name:user.name, age:user.age,id:index}))
+// console.log(map)
+//
+//
+//
 // let map=users.map((user)=>({imya:user.name, vik:user.age}))
 // console.log(map)
-
+//
 // let map=users.map((user,index)=>({name:user.name, age:user.age, status:user.status, id:index}))
 // console.log(map)
-
-
-
-// let sort=users.sort((firstobj,neighbor)=>{
-//     return firstobj.age-neighbor.age;
+//
+//
+//
+// let sort =users.sort((firstobj,neighbor)=>{
+//     return firstobj.age-neighbor.age
 // })
 // console.log(sort)
+//
+// console.log(users.sort((a,b)=>a.name.toLowerCase().localeCompare(b.name.toLowerCase())))
+//
+//
+*/
 
 
-// console.log(users.sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase())))
-
-let reduce=users.reduce((previousValue,currentValue)=>{
-      if (currentValue.status){
-           previousValue[0].push(currentValue);
-      }else{
-           previousValue[1].push(currentValue);
-      }
-      return previousValue
-    },
+let reduce=users.reduce(
+    (accumulator,user) => {
+if(user.status===true){
+    accumulator[0].push(user);
+}else{
+    accumulator[1].push(user);
+}
+return accumulator;
+     },
     [[],[]]
 )
-console.log(reduce[0])
-console.log(reduce[1])
+console.log(reduce)
+
+
